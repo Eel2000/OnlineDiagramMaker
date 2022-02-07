@@ -11,6 +11,7 @@
         public DateTime dateTime { get; set; }
         public string DataNodes { get; set; }
         public string DataNodesConnectors { get; set; }
+        public string SessionId { get; set; }
 
         public virtual User User { get; set; }
     }
