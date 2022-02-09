@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineDiagramMaker.Server", "OnlineDiagramMaker\OnlineDiagramMaker.Server.csproj", "{B7F304A5-114E-48E9-AFA9-E7B2683D8A84}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineDiagramMaker.Server", "OnlineDiagramMaker\OnlineDiagramMaker.Server.csproj", "{B7F304A5-114E-48E9-AFA9-E7B2683D8A84}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineDiagramMaker.Client", "OnlineDiagramMaker.Client\OnlineDiagramMaker.Client.csproj", "{87AE0224-71EF-48BE-97B0-DC66BD9F6023}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineDiagramMaker.Client", "OnlineDiagramMaker.Client\OnlineDiagramMaker.Client.csproj", "{87AE0224-71EF-48BE-97B0-DC66BD9F6023}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineDiagramMaker.Shared", "OnlineDiagramMaker.Shared\OnlineDiagramMaker.Shared.csproj", "{0BA45B67-9F54-4E50-81A6-D9D823539721}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineDiagramMaker.Shared", "OnlineDiagramMaker.Shared\OnlineDiagramMaker.Shared.csproj", "{0BA45B67-9F54-4E50-81A6-D9D823539721}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
