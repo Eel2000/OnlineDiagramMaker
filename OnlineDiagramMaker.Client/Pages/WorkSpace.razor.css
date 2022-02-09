@@ -1,0 +1,18 @@
+﻿.top-toolbar {
+    display: flex;
+    padding-left: 1%;
+}
+
+.aside {
+    height: 100%;
+}
+
+.top-menu li{
+    display: inline-block;
+}
+
+img{
+    width: 6%;
+    border-radius: 100px;
+    padding: 1%;
+}
