@@ -36,19 +36,37 @@
     <div class="col-2">
         <div class="aside">
             <aside>
-                <ul>
-                    @foreach (var item in shapes)
-                    {
-                        <li class="btn btn-secondary" @onclick="@(()=>CreateBasicForm(item))">@item</li>
-                    }
-                </ul>
+                <a class="btn btn-outline-secondary dropdown" @onclick="@ExpandNavMenu">Basic</a>
+                <nav class="@NavMenuCollapseCss" @onclick="@ExpandNavMenu">
+                    <ul>
+                        @if (expandNavMenu)
+                        {
+                            @foreach (var item in shapes)
+                            {
+                                <li class="btn btn-secondary" @onclick="@(()=>CreateBasicForm(item))">@item</li>
+                            }
+                        }
+                    </ul>
+                </nav>
+                <a class="btn btn-outline-secondary dropdown" @onclick="@ExpandOrCollapseConnectorsArea">Connectors</a>
+                <nav class="@NavConnectorsCollapseCss" @onclick="@ExpandOrCollapseConnectorsArea">
+                    <ul>
+                        @*@if (expandConnnectorsShape)
+                            {*@
+                        @foreach (var item in connectorsShape)
+                        {
+                            <li class="btn btn-secondary" @onclick="@(()=>CreateConnector(item))">@item</li>
+                        }
+                        @*}*@
+                    </ul>
+                </nav>
             </aside>
         </div>
     </div>
     <div class="col-10">
-        <div class="drawing-area">
+        <div class="drawing-area" @ref="div">
             <section class="board">
-                <SfDiagramComponent @ref="@diagram" Width="100%" Height="800px" Nodes="@nodes" />
+                <SfDiagramComponent @ref="@diagram" Width="100%" Height="800px" Nodes="@nodes" Connectors="@connectors" />
             </section>
         </div>
     </div>
