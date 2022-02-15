@@ -102,7 +102,7 @@ namespace OnlineDiagramMaker.Client.Pages
             export.PageHeight = 1054;
             export.Margin = new Margin() { Left = 10, Right = 10, Bottom = 10, Top = 10 };
 
-            await diagram.ExportAsync("diagram", DiagramExportFormat.PNG, export);
+            await diagram!.ExportAsync("diagram", DiagramExportFormat.PNG, export);
         }
 
         private async void PrindOrExportPdf()
@@ -124,7 +124,7 @@ namespace OnlineDiagramMaker.Client.Pages
             print.FitToPage = multiplePage;
             print.Orientation = orientation;
             print.Margin = new Margin() { Left = left, Top = top, Right = right, Bottom = bottom };
-            await diagram.PrintAsync(print);
+            await diagram!.PrintAsync(print);
         }
     }
 }
