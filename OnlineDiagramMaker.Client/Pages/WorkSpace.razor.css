@@ -1,0 +1,51 @@
+﻿.top-toolbar {
+    display: flex;
+    border-bottom-style: groove;
+}
+
+.aside {
+    height: 800px;
+    overflow-y: auto;
+    border-right-style: groove;
+    position: relative;
+    width: 100%;
+}
+
+    .aside aside {
+        height: 800px;
+        scrollbar-track-color: aliceblue;
+        overflow-y: scroll;
+    }
+
+        .aside aside li {
+            margin: 1px;
+            display: flow-root;
+        }
+
+.top-menu li {
+    display: inline-block;
+}
+
+img {
+    width: 6%;
+    border-radius: 100px;
+    padding: 1%;
+}
+
+
+.drawing-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 80vh;
+    position: relative;
+}
+
+.board {
+    background-color: azure;
+    border: medium;
+    height: 50%;
+    width: 100%;
+    overflow: auto;
+}

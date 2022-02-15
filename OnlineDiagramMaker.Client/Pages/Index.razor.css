@@ -1,0 +1,60 @@
+﻿.centerdiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 80vh;
+    background-attachment: scroll;
+}
+
+.btnStart {
+    max-width: 1500px;
+    width: 300px;
+    margin: auto;
+    background-color: #1b6ec2;
+    stroke: none;
+    border: none;
+    max-height: 1000px;
+    color: white;
+    border-radius: 5px;
+    text-justify: auto;
+    height: 50px;
+    z-index: 1;
+    box-shadow: 3px 5px 5px 5px grey;
+}
+
+    .btnStart:active {
+        background: #1b6ec2;
+        -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+        -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+        box-shadow: inset 0px 0px 5px #c1c1c1;
+        outline: none;
+        cursor: pointer;
+    }
+
+    .btnStart:has(:hover) {
+        border-color: none;
+    }
+
+    .btnStart:is(:hover) {
+        border-color: none;
+    }
+
+.head {
+    /*background-color: ghostwhite;*/
+    display: flex;
+    align-items: center;
+    text-align: center;
+    min-height: 50vh;
+    justify-content: center;
+    word-wrap: break-word;
+    column-fill: balance-all;
+    height: 40%;
+    color: #1b6ec2;
+    font-size: large;
+}
+
+.sl {
+    margin-left: 0em;
+    margin-right:1em;
+}

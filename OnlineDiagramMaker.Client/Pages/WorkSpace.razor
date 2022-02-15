@@ -1,0 +1,74 @@
+﻿@page "/work-space"
+
+<PageTitle>Untitled project</PageTitle>
+
+
+<div class="row border-end top-toolbar">
+    <h3><span><img src="/icon-192.png" alt="" site logo /></span>Untitled document</h3>
+    <nav class="top-menu">
+        <ul>
+            <li>
+                <div class="dropdown show">
+                    <button class="btn btn-secondary btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        File <span class="oi oi-file"></span>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" href="#">New document</a>
+                        <a class="dropdown-item" href="#">Save</a>
+                        <a class="dropdown-item" href="#">Exportations</a>
+                    </div>
+                </div>
+            </li>
+            <li><button class="btn btn-outline-secondary btn-sm">Save <span class="oi oi-hard-drive"></span></button></li>
+            <li><button class="btn btn-secondary btn-sm" @onclick="@Exportpng">Export as PNG <span class="oi oi-data-transfer-download"></span></button></li>
+            <li><button class="btn btn-secondary btn-sm">Export as SVG <span class="oi oi-data-transfer-download"></span></button></li>
+            <li><button class="btn btn-secondary btn-sm" @onclick="@PrindOrExportPdf">Export as PDF <span class="oi oi-data-transfer-download"></span></button></li>
+        </ul>
+    </nav>
+    <nav class="tools-top">
+        <ul>
+            <li class="oi oi-action-undo btn-outline-secondary btn-sm" @onclick="@(()=>UndoDraw())"></li>
+            <li class="oi oi-action-redo btn-outline-secondary btn-sm" @onclick="@(()=>RedoDraw())"></li>
+        </ul>
+    </nav>
+</div>
+<div class="row">
+    <div class="col-2">
+        <div class="aside">
+            <aside>
+                <a class="btn btn-outline-secondary dropdown" @onclick="@ExpandNavMenu">Basic</a>
+                <nav class="@NavMenuCollapseCss" @onclick="@ExpandNavMenu">
+                    <ul>
+                        @if (expandNavMenu)
+                        {
+                            @foreach (var item in shapes)
+                            {
+                                <li class="btn btn-secondary" @onclick="@(()=>CreateBasicForm(item))">@item</li>
+                            }
+                        }
+                    </ul>
+                </nav>
+                <a class="btn btn-outline-secondary dropdown" @onclick="@ExpandOrCollapseConnectorsArea">Connectors</a>
+                <nav class="@NavConnectorsCollapseCss" @onclick="@ExpandOrCollapseConnectorsArea">
+                    <ul>
+                        @*@if (expandConnnectorsShape)
+                            {*@
+                        @foreach (var item in connectorsShape)
+                        {
+                            <li class="btn btn-secondary" @onclick="@(()=>CreateConnector(item))">@item</li>
+                        }
+                        @*}*@
+                    </ul>
+                </nav>
+            </aside>
+        </div>
+    </div>
+    <div class="col-10">
+        <div class="drawing-area" @ref="div">
+            <section class="board">
+                <SfDiagramComponent @ref="@diagram" Width="100%" Height="800px" Nodes="@nodes" Connectors="@connectors" />
+            </section>
+        </div>
+    </div>
+</div>
+
